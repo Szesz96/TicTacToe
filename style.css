@@ -1,0 +1,126 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+	font-family: 'Titan One', sans-serif;
+	background: -webkit-linear-gradient(45deg,rgb(47, 33, 87), #353535);
+}
+
+.game-title {
+	font-size: 60px;
+	letter-spacing: 2px;
+	background: -webkit-linear-gradient(45deg,#5ff16b, #00aeff);
+     background-clip: border-box;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-bottom: 50px;
+}
+
+.gameboard {
+	width: 306px;
+	height: 306px;
+	background-color: black;
+	display: flex;
+	flex-wrap: wrap;
+	border: 3px solid black;
+	gap: 3px;
+	margin-bottom: 50px;
+     border-radius: 8px;
+}
+
+.square {
+	width: 100px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, 0.842);
+	border: 2px solid black;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+     border-radius: 8px;
+     cursor: pointer;
+	transition: background-color .3s;
+}
+
+.square:hover {
+	background-color: rgba(255, 255, 255, 0.575);
+}
+
+.circle {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	border: 12px solid #27c541;
+}
+
+.cross {
+	width: 70px;
+	height: 70px;
+	position: relative;
+}
+
+.cross:before,
+.cross:after {
+	content: '';
+	position: absolute;
+	background-color: #00aeff;
+	transform: rotate(45deg);
+}
+
+.cross:before {
+	left: 50%;
+	width: 30%;
+	margin-left: -15%;
+	height: 100%;
+}
+
+.cross:after {
+	top: 50%;
+	height: 30%;
+	margin-top: -15%;
+	width: 100%;
+}
+
+.info {
+	color: #47e6b1;
+	font-size: 30px;
+	letter-spacing: 1px;
+	text-shadow: 2px 2px 2px rgb(24, 23, 23);
+}
+
+.points-table {
+	margin-bottom: 30px;
+}
+
+.points {
+	font-size: 20px;
+	color: white;
+	text-shadow: 1px 1px 2px black;
+}
+
+.new-game {
+	margin-top: 30px;
+	width: 80px;
+	height: 60px;
+	border-radius: 8px;
+	border: none;
+	font-size: 30px;
+	cursor: pointer;
+	background: linear-gradient(45deg,#5ff16b, #00aeff);
+	transition: all .3s;
+}
+
+i.fa-solid {
+	transition: all .3s;
+}
+
+.new-game:hover i.fa-solid{
+	transform: rotate(360deg);
+}
